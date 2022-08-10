@@ -5,15 +5,20 @@ export async function validateMiddleware(
   ctx: Context,
   next: () => Promise<any>
 ) {
-  const vtexIdToken = ctx.get('VtexIdclientAutCookie')
-  const appKey = ctx.get('X-VTEX-API-AppKey')
-  const appToken = ctx.get('X-VTEX-API-AppToken')
+  const {
+    header: { authorizationtoken, appkey, apptoken },
+    clients: { authClient },
+  } = ctx
 
-  if (vtexIdToken ? false : !(appKey !== '' && appToken !== '')) {
-    ctx.status = 401
-    ctx.body = 'Unauthorized access.'
+  const authorizationToken = await authClient.validateAppKeyAndToken(
+    authorizationtoken,
+    appkey,
+    apptoken
+  )
 
-    return
+  if (!authorizationToken) {
+    ctx.status = 402
+    ctx.body = 'Authentication failed'
   }
 
   const requestList = await json(ctx.req)

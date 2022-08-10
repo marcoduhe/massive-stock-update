@@ -34,6 +34,9 @@ curl --location --request PUT 'https://{{workspace}}--{{accountName}}.myvtex.com
   - Accept : application/json
   - Content-Type : application/json; charset=utf-8
   - VtexIdclientAutCookie : `eyJhbGciOi...`
+  OR 
+  - X-VTEX-API-AppKey : `app key`
+  - X-VTEX-API-AppToken : `app token`
 
 ### Path params
 
@@ -170,6 +173,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/GuidoSdo"><img src="https://avatars.githubusercontent.com/u/33711188?v=4" width="100px;" alt=""/><br /><sub><b>Guido Salcedo</b></sub></a><br /><a href="https://github.com/vtex-apps/massive-stock-update" title="Code">💻</a></td>
 
    <td align="center"><a href="https://github.com/lucasdellasala"><img src="https://avatars.githubusercontent.com/u/55720621?v=4" width="100px;" alt=""/><br /><sub><b>Lucas Della Sala</b></sub></a><br /><a href="https://github.com/vtex-apps/massive-stock-update" title="Code">💻</a></td>
+
+    <td align="center"><a href="https://github.com/tomymehdi"><img src="https://avatars.githubusercontent.com/u/774112?v=4" width="100px;" alt=""/><br /><sub><b>Tomás Alfredo Mehdi</b></sub></a><br /><a href="https://github.com/vtex-apps/speech-to-text/commits?author=tomymehdi" title="Code">💻</a></td>
+
   </tr>
   
 </table>
