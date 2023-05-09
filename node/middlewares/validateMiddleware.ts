@@ -43,7 +43,7 @@ export async function validateMiddleware(
       requestErrorList.push(errorResponseGenerator('warehouseId'))
     }
 
-    if (typeof quantity!='number') {
+    if (typeof quantity!=='number') {
       requestErrorList.push(errorResponseGenerator('quantity'))
     }
 
