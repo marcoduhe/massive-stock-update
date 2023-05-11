@@ -35,15 +35,15 @@ export async function validateMiddleware(
       dateUtcOnBalanceSystem,
     } = request
 
-    if (typeof sku!=='number') {
+    if (typeof sku !== 'number') {
       requestErrorList.push(errorResponseGenerator('sku'))
     }
 
-    if (typeof warehouseId!=='string' && typeof warehouseId!=='number') {
+    if (typeof warehouseId !== 'string' && typeof warehouseId !== 'number') {
       requestErrorList.push(errorResponseGenerator('warehouseId'))
     }
 
-    if (typeof quantity!=='number') {
+    if (typeof quantity !== 'number') {
       requestErrorList.push(errorResponseGenerator('quantity'))
     }
 
